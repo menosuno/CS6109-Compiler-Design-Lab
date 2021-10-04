@@ -1,0 +1,17 @@
+
+Lower = concatenation
+The word after yyless() = con
+Lower = catenation
+The word after yyless() = cat
+Lower = enation
+The word after yyless() = ena
+Lower = tion
+The word after yyless() = tio
+Lower = n
+The word after yyless() = n t
+Lower = wo
+The word after yyless() = wo 
+Lower = string
+The word after yyless() = str
+Lower = ing
+The word after yyless() = ing

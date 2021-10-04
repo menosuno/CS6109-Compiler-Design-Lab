@@ -1,0 +1,24 @@
+def: keywords
+ f: identifier
+(x: identifier
+):: delimiter
+
+	if: keywords
+ x: identifier
+ >: less than operator
+=: assignment operator
+ 1: numbers
+:: delimiter
+
+		return: keywords
+ x: identifier
+ *: arithmentic operator
+ x: identifier
+
+	else: keywords
+
+		return: keywords
+ x: identifier
+
+	print: keywords
+ x: identifier
