@@ -1,0 +1,18 @@
+c
+Seperator:  
+Operator: =
+Seperator:  
+Operator: ++a
+Seperator:  
+Operator: +
+Seperator:  
+Operator: ++b
+c
+Seperator:  
+Operator: =
+Seperator:  a
+Operator: ++
+Seperator:  
+Operator: +
+Seperator:  
+Operator: ++b

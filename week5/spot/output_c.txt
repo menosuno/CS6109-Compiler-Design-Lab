@@ -1,0 +1,7 @@
+
+Mixed letter is=The 
+Mixed letter is=GIVen 
+Mixed letter is=SENtence 
+ Lower=is
+The word after yyless()=is S
+Mixed letter is=AME

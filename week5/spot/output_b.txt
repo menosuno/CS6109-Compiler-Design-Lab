@@ -1,0 +1,20 @@
+print: identifier
+(3: numbers
++: arithmentic operator
+x: identifier
+*: arithmentic operator
+2: numbers
+)
+: whitespace
+def: identifier
+ : whitespace
+f: identifier
+(x: identifier
+):
+: whitespace
+	: whitespace
+return: identifier
+ : whitespace
+x: identifier
+
+: whitespace
