@@ -1,19 +1,17 @@
-print: identifier
-(3: numbers
-+: arithmentic operator
+print: keywords
+(3+: arithmentic operator
 x: identifier
 *: arithmentic operator
-2: numbers
-)
+2)
 : whitespace
-def: identifier
+def: keywords
  : whitespace
 f: identifier
 (x: identifier
 ):
 : whitespace
 	: whitespace
-return: identifier
+return: keywords
  : whitespace
 x: identifier
 

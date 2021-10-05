@@ -3,21 +3,44 @@
 %{
     #undef yywrap
     #define yywrap() 1
-    int n = 0;
-    int ln = 0;
+
+    #include <stdio.h>
 %}
 
 %%
-if|else|while|int|switch|for|char { fprintf(yyout,"%s: keywords\n", yytext);}
-[a-zA-Z]([a-zA-Z0-9])* { fprintf(yyout, "%s: identifier\n", yytext);}
-[0-9]+ { fprintf(yyout, "%s: numbers\n", yytext);}
-([ ])|\n|\t { fprintf(yyout, "%s: whitespace\n", yytext);}
-"+"|"-"|"*"|"/" { fprintf(yyout, "%s: arithmentic operator\n", yytext);}
-"++" { fprintf(yyout, "%s: increment\n", yytext);}
-! | @|#\/ { fprintf(yyout, "%s: special", yytext);}
-= { fprintf(yyout, "%s: assignment operator\n", yytext);}
-"<" { fprintf(yyout, "%s: greater than operator\n", yytext);}
-">" { fprintf(yyout, "%s: less than operator\n", yytext);}
+
+if|else|while|for|print|def|return|int|char|float|double|class|static|enum { 
+        fprintf(yyout,"%s: keywords\n", yytext);
+    }
+
+[a-zA-Z][\w\d]* { 
+        fprintf(yyout, "%s: identifier\n", yytext);
+    }
+
+[\d]+\.*[\d]* { 
+        fprintf(yyout, "%s: numbers\n", yytext);
+    }
+
+[ ]|\n|\t { 
+        fprintf(yyout, "%s: whitespace\n", yytext);
+    }
+
+"+"|"-"|"*"|"/"|"%" { 
+        fprintf(yyout, "%s: arithmentic operator\n", yytext);
+    }
+
+"++"|"--" { 
+        fprintf(yyout, "%s: unary operators\n", yytext);
+    }
+
+"=" { 
+        fprintf(yyout, "%s: assignment operator\n", yytext);
+    }
+
+"<"|"<="|">"|">=" { 
+        fprintf(yyout, "%s: comparison operator\n", yytext);
+    }
+
 %%
 
 int main(){
