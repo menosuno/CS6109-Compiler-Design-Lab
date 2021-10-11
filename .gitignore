@@ -3,3 +3,5 @@
 *.bak
 *.c
 *.exe
+*.o
+*.out
