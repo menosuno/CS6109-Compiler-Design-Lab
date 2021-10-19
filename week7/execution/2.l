@@ -14,21 +14,20 @@
 
 \(.+\)[ \n\t]*"{"? {
     for(i=1;yytext[i]!=')';i++)
-            buffer[i-1]=yytext[i];
+       buffer[i-1]=yytext[i];
     buffer[i-1]='\0';
 
-    //push the condition statement into stack
     pos++;
     strcpy(stack[pos],buffer);
 
     if(yytext[yyleng-1] != '{') {
-            fprintf(yyout,"(%s){",buffer);
+        fprintf(yyout,"(%s){",buffer);
     }
     else
-            fprintf(yyout,"%s",yytext);
+        fprintf(yyout,"%s",yytext);
 
     for(i=0;i<1024;i++)
-            buffer[i]='\0';
+        buffer[i]='\0';
 }
 
 "else"[ \n\t]*"{"? {
@@ -37,7 +36,7 @@
     fprintf(yyout,"{\n\t");
 
     if(yytext[yyleng-1] != '{')
-            curly=1;
+        curly=1;
     pos--;
 }
 
@@ -45,16 +44,16 @@
     fprintf(yyout,"%s",yytext);
 
     if(!lock) {
-            fprintf(yyout,"\n\tbreak;");
-            fprintf(yyout,"\n}");
-            lock=1;
+        fprintf(yyout,"\n\tbreak;");
+        fprintf(yyout,"\n}");
+        lock=1;
     }
     else {
-            fprintf(yyout,"\n\t\tbreak;");
-            fprintf(yyout,"\n\t}");
+        fprintf(yyout,"\n\t\tbreak;");
+        fprintf(yyout,"\n\t}");
     }
     if(curly&&pos==-1)
-            fprintf(yyout,"}");
+        fprintf(yyout,"}");
 }
 
 . {
