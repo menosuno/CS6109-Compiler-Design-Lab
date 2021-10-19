@@ -1,0 +1,13 @@
+while(condition 1) 
+	{statement 1;
+	break;
+}
+while(!condition 1){
+	while(condition 2) 
+		{statement 2;
+		break;
+	}
+while(!condition 2){
+	statement 3;
+		break;
+	}}

@@ -1,6 +1,7 @@
-if (x > 0) {printf("%d",x);} 
+if (condition 1) 
+	{statement 1;} 
 else 
-	if (x < 0) 
-		{printf("%d",x);}
+	if (condition 2) 
+		{statement 2;}
 	else 
-		{printf("%d",x);}
+		{statement 3;}
