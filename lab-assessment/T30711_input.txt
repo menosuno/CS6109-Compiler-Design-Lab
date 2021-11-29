@@ -1,0 +1,6 @@
+main() {
+	int a, sum, count;
+	if(a == sum) {
+		printf("%d", count);
+	}
+}
