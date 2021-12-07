@@ -1,6 +1,6 @@
 %option noyywrap
 %{
-	#include<stdio.h>
+	#include <stdio.h>
 %}
 
 %%
@@ -8,12 +8,10 @@
 [a-z]([a-z]|[0-9])* {printf("identifier");}
 [0-9]* {printf("number");}
 [0-9]+(.[0-9]+)?(E[+|-]?[0-9])? {printf("unsigned number");} 
-.* { printf ("invalid"); }
-
+.* {printf ("invalid");}
 %%
 
-int main()
-{
+int main() {
 	yylex();
 	return 0;
 }

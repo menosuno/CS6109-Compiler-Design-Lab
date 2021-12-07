@@ -1,22 +1,21 @@
 %option noyywrap
+
+/** definitions **/
 %{
-	#include<stdio.h>
+	#include <stdio.h>
+	int line_no = 0;
+	int char_no = 0;
 %}
 
-%{
-int line_no = 0;
-int char_no = 0;
-%}
-
+/** actions **/
 %%
 \n ++line_no;
 . ++char_no;
 end return 0;
-
 %%
 
-int main()
-{
+/** user sub-routines **/
+int main() {
 	yylex();
 	printf("number of lines = %d, number of chars = %d\n",line_no,char_no );
 	return 0;
