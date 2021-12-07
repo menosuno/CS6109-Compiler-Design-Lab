@@ -1,18 +1,24 @@
 %option noyywrap
+
+vowels [aeiouAEIOU]
+
 %{
-	#include<stdio.h>
-	int vc = 0;
-	int cc = 0;
+	#include <stdio.h>
+	int vc = 0, cc = 0;
 %}
 
 %%
-[aeiou AEIOU] {vc++;}
-[a-z A-Z] {cc++;}
+{vowels} { 
+	vc++;
+}
+[^{vowels}] {
+	cc++;
+}
 %%
 
-int main(){
+int main() {
 	printf("Enter a string : ");
 	yylex();
-	printf("\n Vowels count : %d \n Consonants count : %d", vc, cc);
+	printf("\nVowels count : %d \n Consonants count : %d\n", vc, cc);
 	return 0;
 }

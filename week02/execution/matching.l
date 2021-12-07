@@ -1,10 +1,10 @@
 %option noyywrap
 %{
-	int match=0;
+	int match = 0;
 %}
 
 %%
-[a-zA-z0-9._]+@[a-z]+".com"|".in" {match=1;}
+[a-zA-z0-9._]+@[a-z]+".com"|".in" {match = 1;}
 \n return 0;
 %%
 
