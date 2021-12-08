@@ -1,26 +1,25 @@
 
 Uppercase letter = G
 Start of 2nd yymore
-G
+
 End of 2nd yymore
-G
+
 Lowercase letter = Goo
 Start of 1st yymore
-Goo
+
 End of 1st yymore
-Goo
+
 Uppercase letter = GooD
 Start of 2nd yymore
-GooD
+
 End of 2nd yymore
-GooDGooD 
+GooD 
 Uppercase letter = EXAM
 Start of 2nd yymore
-EXAM
+
 End of 2nd yymore
-EXAM
+
 Lowercase letter = EXAMple
 Start of 1st yymore
-EXAMple
+
 End of 1st yymore
-EXAMple

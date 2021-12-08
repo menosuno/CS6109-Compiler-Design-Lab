@@ -21,7 +21,7 @@ if|else|while|int|switch|for|char|print|return|def { fprintf(yyout,"%s: keywords
 
 int main(){
     yyin = fopen("input_e.txt","r");
-    yyout=fopen("output_e.txt","w");
+    yyout = fopen("output_e.txt","w");
     yylex();
     return 0;
 }

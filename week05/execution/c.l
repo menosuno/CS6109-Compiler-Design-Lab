@@ -9,7 +9,6 @@
 	yyless(3);
 	fprintf(yyout, "\nThe word after yyless() = ");ECHO;
 }
-
 [a-zA-Z]+ {
 	fprintf(yyout, "\nMixed letter is = ");ECHO;
 }

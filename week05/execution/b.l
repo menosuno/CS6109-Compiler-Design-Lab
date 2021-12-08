@@ -8,16 +8,13 @@
 %}
 
 %%
-
 [a-zA-Z]+ {
 	if (strcmp(yytext, replace) == 0) 
 		fprintf(yyout, "%s", replace_with);
 	else
 		fprintf(yyout, "%s", yytext);
 }
-
 . fprintf(yyout, "%s", yytext);
-
 %%
 
 int main() {
