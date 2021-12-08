@@ -1,14 +1,18 @@
 %option noyywrap
 %{
-	#include<stdio.h>
+	#include <stdio.h>
 %}
 
 %%
-\/\*([^*"]*|".*"|\*+[^\/])*\*\/ {printf("String %s represents a comment..\n",yytext);}
-.* {printf("Doesn't satisfy the given condition..\n");}
+\/\*([^*"]*|".*"|\*+[^\/])*\*\/ {
+	printf("String %s represents a comment..\n",yytext);
+}
+.* {
+	printf("Doesn't satisfy the given condition..\n");
+}
 %%
-int main()
-{
+
+int main() {
 	yylex();
 	return 0;
 }
