@@ -4,7 +4,10 @@
 	#include<string.h>
 %}
 %%
-[a-z]+ {yyless(4);fprintf(yyout,"\n Lower = %s",yytext);fprintf(yyout,"\nThe word after yyless() = %s",yytext);}
+[a-z]+ {
+yyless(4);
+fprintf(yyout,"\n Lower = %s",yytext);
+fprintf(yyout,"\nThe word after yyless() = %s",yytext);}
 [a-zA-Z]+ {printf("\nMixed letter is = %s",yytext);}
 %%
 int main()

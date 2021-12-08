@@ -13,7 +13,7 @@ if|else|while|for|print|def|return|int|char|float|double|class|static|enum {
         fprintf(yyout,"%s: keywords\n", yytext);
     }
 
-[a-zA-Z][\w\d]* { 
+[a-zA-Z_][\w\d]* { 
         fprintf(yyout, "%s: identifier\n", yytext);
     }
 
@@ -43,9 +43,9 @@ if|else|while|for|print|def|return|int|char|float|double|class|static|enum {
 
 %%
 
-int main(){
+int main() {
     yyin = fopen("input_b.txt","r");
-    yyout=fopen("output_b.txt","w");
+    yyout = fopen("output_b.txt","w");
     yylex();
     return 0;
 }

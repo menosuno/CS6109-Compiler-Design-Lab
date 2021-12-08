@@ -1,17 +1,12 @@
+ 
+ Lower = of T
+The word after yyless() = of T
+ Lower = wo s
+The word after yyless() = wo s
+ Lower = trin
+The word after yyless() = trin
+ Lower = gs
 
- Lower = conc
-The word after yyless() = conc
- Lower = aten
-The word after yyless() = aten
- Lower = atio
-The word after yyless() = atio
- Lower = n of
-The word after yyless() = n of 
- Lower = two 
-The word after yyless() = two 
- Lower = stri
-The word after yyless() = stri
- Lower = ngs
 
-The word after yyless() = ngs
+The word after yyless() = gs
 
