@@ -1,15 +1,14 @@
 %option noyywrap
 %{
-#include <stdio.h>
+	#include <stdio.h>
 %}
 
 %%
-[a-zA-Z0-9]+ { printf("%s\n",yytext);}
+[A-Za-z\d]+ {printf("%s\n",yytext);}
 .|\n
 %%
 
-int main() 
-{
+int main() {
 	yyin = fopen("file1.txt","r");
 	printf("Required Strings:\n");
 	yylex();

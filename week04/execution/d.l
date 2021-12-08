@@ -4,14 +4,11 @@
 %}
 
 %%
-[^abcABC] {
-printf("%s",yytext);
-}
+[^abcABC] { printf("%s",yytext); }
 .|\n {;}
 %%
 
-int main() 
-{
+int main() {
     yyin = fopen("file4.txt","r");
     printf("Required Strings:\n");
     yylex();
