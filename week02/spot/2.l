@@ -1,6 +1,7 @@
 %option noyywrap
 
 vowels [aeiouAEIOU]
+consonants [^aeiouAEIOU\t\n \,\.\d]
 
 %{
 	#include <stdio.h>
@@ -11,7 +12,7 @@ vowels [aeiouAEIOU]
 {vowels} { 
 	vc++;
 }
-[^{vowels}] {
+{consonants} {
 	cc++;
 }
 %%
