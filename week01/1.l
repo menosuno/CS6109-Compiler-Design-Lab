@@ -11,6 +11,7 @@
 %%
 \n ++line_no;
 . ++char_no;
+/** on scanning the word 'end', yylex() stops scanning **/
 end return 0;
 %%
 
