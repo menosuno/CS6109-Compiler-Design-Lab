@@ -1,0 +1,1 @@
+while(a == b && c == d || e == f) do if (x < 100 || x > 200 && x != y) then x:=x+1; else x:=x-1;
