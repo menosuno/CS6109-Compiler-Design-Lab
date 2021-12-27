@@ -1,13 +1,13 @@
 %option noyywrap
 
 %{
-	char stack[100],s[100];
-	int tos=0,x=0;
+	char stack[100], s[100];
+	int tos = 0, x = 0;
 	void push(char);
 	void pop();
 	char top();
 	int priority(char c);
-	extern FILE *yyin,*yyout;
+	extern FILE *yyin, *yyout;
 %}
 
 %%
@@ -16,25 +16,25 @@
 
 [+\-\*\/\(\)] { 
 	char op=yytext[0];
-    if(tos==0||op=='(')
-        push(op);
-    else if(op==')'){
-        while(top()!='('){
-	    	s[x] = top();x++;
-            pop();
-        }
-        pop();
-    }
-                   
+	if(tos==0||op=='(')
+		push(op);
+	else if(op==')'){
+		while(top()!='('){
+			s[x] = top();x++;
+			pop();
+		}
+		pop();
+	}
+				   
 	else if(priority(op)>=priority(top())){
 		push(op);
 	}
 	else if(priority(op)<=priority(top())) {
 		while(priority(op)<=priority(top())) {
-	    	s[x] = top();x++;
-	    	pop();
-	    }
-	    push(op);
+			s[x] = top();x++;
+			pop();
+		}
+		push(op);
 	}
 }
 
@@ -69,12 +69,12 @@ void push(char c){
    tos++;
 }
 int priority(char c) {
-    switch(c){
+	switch(c){
 		case '(':return 0;
 		case ')':return 0;
 		case '+':return 1;
 		case '-':return 1;
 		case '*':return 2;
 		case '/':return 2;
-    }
+	}
 }
